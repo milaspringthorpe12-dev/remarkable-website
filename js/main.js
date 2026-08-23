@@ -142,11 +142,21 @@
         return;
       }
 
-      // NOTE: This is a static site with no backend attached yet. Wire this
-      // form up to a service like Formspree or Netlify Forms to receive
-      // submissions by email. Until then, this shows a confirmation only.
-      showStatus('success', 'Thanks, your message has been received. I\'ll get back to you within 1-2 business days.');
-      form.reset();
+      var data = new FormData(form);
+      var params = new URLSearchParams();
+      data.forEach(function (value, key) { params.append(key, value); });
+
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: params.toString()
+      }).then(function (response) {
+        if (!response.ok) { throw new Error('Submission failed'); }
+        showStatus('success', 'Thanks, your message has been received. I\'ll get back to you within 1-2 business days.');
+        form.reset();
+      }).catch(function () {
+        showStatus('error', 'Something went wrong sending that. Please try again, or email remarkable40@outlook.com directly.');
+      });
     });
 
     function showStatus(type, msg) {

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://milaspringthorpe12-dev.github.io/remarkable-website/sitemap.xml
+Sitemap: https://remarkable-co.netlify.app/sitemap.xml
