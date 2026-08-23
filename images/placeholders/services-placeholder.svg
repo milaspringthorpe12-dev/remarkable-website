@@ -1,0 +1,8 @@
+<svg width="1600" height="700" viewBox="0 0 1600 700" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder image, replace with real brand or lifestyle photography">
+  <rect width="1600" height="700" fill="#EEE8E1"/>
+  <rect x="1" y="1" width="1598" height="698" fill="none" stroke="#8D3A3C" stroke-opacity="0.25" stroke-width="2"/>
+  <circle cx="260" cy="540" r="280" fill="#8D3A3C" opacity="0.08"/>
+  <circle cx="1360" cy="160" r="260" fill="#280B0F" opacity="0.08"/>
+  <text x="800" y="360" font-family="Georgia, 'Times New Roman', serif" font-size="30" fill="#280B0F" text-anchor="middle" letter-spacing="1">Placeholder Image</text>
+  <text x="800" y="396" font-family="Arial, sans-serif" font-size="16" fill="#8D3A3C" text-anchor="middle" letter-spacing="0.5">Swap for real brand or lifestyle photography</text>
+</svg>

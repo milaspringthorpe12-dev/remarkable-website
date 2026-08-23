@@ -1,0 +1,10 @@
+<svg width="900" height="1100" viewBox="0 0 900 1100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder founder portrait, replace with real photo">
+  <rect width="900" height="1100" fill="#EEE8E1"/>
+  <rect x="1" y="1" width="898" height="1098" fill="none" stroke="#280B0F" stroke-opacity="0.25" stroke-width="2"/>
+  <g transform="translate(450,470)" opacity="0.55" fill="none" stroke="#8D3A3C" stroke-width="3">
+    <circle cx="0" cy="-40" r="70"/>
+    <path d="M -130 160 Q -130 30 0 30 Q 130 30 130 160" />
+  </g>
+  <text x="450" y="640" font-family="Georgia, 'Times New Roman', serif" font-size="30" fill="#280B0F" text-anchor="middle" letter-spacing="1">Founder Portrait</text>
+  <text x="450" y="676" font-family="Arial, sans-serif" font-size="16" fill="#8D3A3C" text-anchor="middle" letter-spacing="0.5">Placeholder, swap for a real photo</text>
+</svg>
