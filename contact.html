@@ -89,15 +89,15 @@
                 <input type="text" id="brand" name="brand" autocomplete="organization">
               </div>
               <div class="form-field">
-                <label for="interest">What are you interested in?</label>
-                <select id="interest" name="interest">
-                  <option value="branding">Branding</option>
-                  <option value="content-strategy">Content Strategy</option>
-                  <option value="digital-marketing">Digital Marketing</option>
-                  <option value="email-marketing">Email Marketing</option>
-                  <option value="market-research">Market Research</option>
-                  <option value="not-sure">Not sure yet</option>
-                </select>
+                <label>What are you interested in? (select all that apply)</label>
+                <div class="checkbox-group" id="interest-group">
+                  <label class="checkbox-option"><input type="checkbox" name="interest" value="Branding"> Branding</label>
+                  <label class="checkbox-option"><input type="checkbox" name="interest" value="Content Strategy"> Content Strategy</label>
+                  <label class="checkbox-option"><input type="checkbox" name="interest" value="Digital Marketing"> Digital Marketing</label>
+                  <label class="checkbox-option"><input type="checkbox" name="interest" value="Email Marketing"> Email Marketing</label>
+                  <label class="checkbox-option"><input type="checkbox" name="interest" value="Market Research"> Market Research</label>
+                  <label class="checkbox-option"><input type="checkbox" name="interest" value="Not sure yet"> Not sure yet</label>
+                </div>
               </div>
               <div class="form-field">
                 <label for="message">Message</label>

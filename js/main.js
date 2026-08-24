@@ -98,6 +98,29 @@
     });
   }
 
+  var servicePicker = document.getElementById('service-picker');
+  if (servicePicker) {
+    servicePicker.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var selected = Array.prototype.slice.call(servicePicker.querySelectorAll('input[name="service"]:checked'))
+        .map(function (el) { return el.value; });
+      var query = selected.length ? '?services=' + encodeURIComponent(selected.join(',')) : '';
+      window.location.href = 'contact.html' + query;
+    });
+  }
+
+  var interestGroup = document.getElementById('interest-group');
+  if (interestGroup) {
+    var servicesParam = new URLSearchParams(window.location.search).get('services');
+    if (servicesParam) {
+      var wanted = servicesParam.split(',');
+      wanted.forEach(function (name) {
+        var checkbox = interestGroup.querySelector('input[value="' + name.replace(/"/g, '') + '"]');
+        if (checkbox) { checkbox.checked = true; }
+      });
+    }
+  }
+
   var revealTargets = document.querySelectorAll('.fade-in');
   if ('IntersectionObserver' in window && revealTargets.length) {
     var observer = new IntersectionObserver(
