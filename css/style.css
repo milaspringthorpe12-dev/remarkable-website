@@ -63,9 +63,10 @@ body::before {
   inset: 0;
   z-index: 1;
   pointer-events: none;
-  opacity: 0.85;
+  opacity: 0.9;
   mix-blend-mode: soft-light;
   background-image:
+    repeating-linear-gradient(120deg, rgba(255,255,255,0.16) 0px, rgba(255,255,255,0.04) 60px, rgba(0,0,0,0.05) 120px, rgba(255,255,255,0.12) 180px, rgba(255,255,255,0.16) 240px),
     radial-gradient(ellipse 55% 140% at 18% 12%, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0) 58%),
     radial-gradient(ellipse 48% 130% at 78% 22%, rgba(0,0,0,0.12) 0%, rgba(0,0,0,0) 62%),
     radial-gradient(ellipse 60% 150% at 45% 48%, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0) 58%),
@@ -1058,34 +1059,6 @@ section { padding-block: var(--section-padding); }
   transform: scale(1);
   opacity: 1;
 }
-
-/* ---------- Decorative background blobs ---------- */
-.section--decor { position: relative; overflow: hidden; }
-.section--decor::before,
-.section--decor::after {
-  content: '';
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(70px);
-  opacity: 0.22;
-  pointer-events: none;
-  z-index: 0;
-}
-.section--decor::before {
-  width: 380px;
-  height: 380px;
-  background: var(--burgundy);
-  top: -140px;
-  left: -140px;
-}
-.section--decor::after {
-  width: 320px;
-  height: 320px;
-  background: var(--forest);
-  bottom: -120px;
-  right: -100px;
-}
-.section--decor > .container { position: relative; z-index: 1; }
 
 /* ---------- Hand-drawn flourish (signature brand mark) ---------- */
 .flourish {
