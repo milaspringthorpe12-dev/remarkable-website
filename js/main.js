@@ -178,7 +178,7 @@
         showStatus('success', 'Thanks, your message has been received. I\'ll get back to you within 1-2 business days.');
         form.reset();
       }).catch(function () {
-        showStatus('error', 'Something went wrong sending that. Please try again, or email remarkable40@outlook.com directly.');
+        showStatus('error', 'Something went wrong sending that. Please try again, or email studio@remarkableagency.co.za directly.');
       });
     });
 
