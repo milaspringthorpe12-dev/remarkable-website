@@ -339,7 +339,7 @@ section { padding-block: var(--section-padding); }
     justify-content: center;
     align-items: flex-start;
     padding: 2rem clamp(1.5rem, 8vw, 3rem);
-    background: var(--burgundy);
+    background: var(--burgundy-dark);
     transform: translateX(100%);
     transition: transform var(--transition);
     gap: 1.75rem;
@@ -348,7 +348,7 @@ section { padding-block: var(--section-padding); }
   .nav__links a { font-size: 1.1rem; }
   .nav__cta { margin-top: 0.5rem; }
   .site-header {
-    background: var(--burgundy) !important;
+    background: var(--burgundy-dark) !important;
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
   }
