@@ -339,7 +339,7 @@ section { padding-block: var(--section-padding); }
     justify-content: center;
     align-items: flex-start;
     padding: 2rem clamp(1.5rem, 8vw, 3rem);
-    background: var(--forest);
+    background: var(--burgundy);
     transform: translateX(100%);
     transition: transform var(--transition);
     gap: 1.75rem;
@@ -347,6 +347,11 @@ section { padding-block: var(--section-padding); }
   .nav__links.is-open { transform: translateX(0); }
   .nav__links a { font-size: 1.1rem; }
   .nav__cta { margin-top: 0.5rem; }
+  .site-header--nav-open {
+    background: var(--burgundy) !important;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
 }
 
 /* ---------- Buttons ---------- */
@@ -446,7 +451,11 @@ section { padding-block: var(--section-padding); }
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   z-index: 0;
+}
+@media (max-width: 700px) {
+  .hero--full .hero__bg { object-position: 15% center; }
 }
 .hero--full::after {
   content: '';
