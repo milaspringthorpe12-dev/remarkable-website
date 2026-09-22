@@ -6,7 +6,15 @@
   var siteHeader = document.querySelector('.site-header');
 
   if (navToggle && navLinks) {
-    navToggle.addEventListener('click', function () {
+    function closeNav() {
+      navLinks.classList.remove('is-open');
+      navToggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+      if (siteHeader) { siteHeader.classList.remove('site-header--nav-open'); }
+    }
+
+    navToggle.addEventListener('click', function (e) {
+      e.stopPropagation();
       var isOpen = navLinks.classList.toggle('is-open');
       navToggle.setAttribute('aria-expanded', String(isOpen));
       document.body.style.overflow = isOpen ? 'hidden' : '';
@@ -14,20 +22,20 @@
     });
 
     navLinks.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', function () {
-        navLinks.classList.remove('is-open');
-        navToggle.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
-        if (siteHeader) { siteHeader.classList.remove('site-header--nav-open'); }
-      });
+      link.addEventListener('click', closeNav);
+    });
+
+    document.addEventListener('click', function (e) {
+      if (navLinks.classList.contains('is-open') &&
+        !navLinks.contains(e.target) &&
+        !navToggle.contains(e.target)) {
+        closeNav();
+      }
     });
 
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && navLinks.classList.contains('is-open')) {
-        navLinks.classList.remove('is-open');
-        navToggle.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
-        if (siteHeader) { siteHeader.classList.remove('site-header--nav-open'); }
+        closeNav();
         navToggle.focus();
       }
     });
