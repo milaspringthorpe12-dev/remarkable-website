@@ -18,6 +18,15 @@
         document.body.style.overflow = '';
       });
     });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && navLinks.classList.contains('is-open')) {
+        navLinks.classList.remove('is-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+        navToggle.focus();
+      }
+    });
   }
 
   var header = document.querySelector('.site-header');

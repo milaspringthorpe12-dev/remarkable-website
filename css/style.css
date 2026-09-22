@@ -316,7 +316,10 @@ section { padding-block: var(--section-padding); }
 .nav__toggle {
   display: none;
   color: var(--cream);
-  padding: 0.4rem;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
 }
 .nav__toggle svg { width: 24px; height: 24px; }
 
@@ -327,7 +330,7 @@ section { padding-block: var(--section-padding); }
     padding-block: 1.1rem;
   }
   .nav__group { display: none; }
-  .nav__toggle { display: block; }
+  .nav__toggle { display: flex; }
   .nav__links {
     display: flex;
     position: fixed;
@@ -796,7 +799,8 @@ section { padding-block: var(--section-padding); }
 .form-field textarea:focus,
 .form-field select:focus {
   border-color: var(--burgundy);
-  outline: none;
+  outline: 2px solid var(--burgundy);
+  outline-offset: 1px;
 }
 .form-field textarea { min-height: 140px; resize: vertical; }
 
@@ -809,6 +813,7 @@ section { padding-block: var(--section-padding); }
   display: inline-flex;
   align-items: center;
   gap: 0.55rem;
+  min-height: 44px;
   padding: 0.65rem 1.1rem;
   background: var(--cream);
   border: 1px solid rgba(40, 11, 15, 0.3);
