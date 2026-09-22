@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://remarkable-co.netlify.app/sitemap.xml
+Sitemap: https://www.remarkableagency.co.za/sitemap.xml
