@@ -347,7 +347,7 @@ section { padding-block: var(--section-padding); }
   .nav__links.is-open { transform: translateX(0); }
   .nav__links a { font-size: 1.1rem; }
   .nav__cta { margin-top: 0.5rem; }
-  .site-header--nav-open {
+  .site-header {
     background: var(--burgundy) !important;
     backdrop-filter: none;
     -webkit-backdrop-filter: none;

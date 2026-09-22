@@ -3,14 +3,12 @@
 (function () {
   var navToggle = document.querySelector('.nav__toggle');
   var navLinks = document.querySelector('.nav__links');
-  var siteHeader = document.querySelector('.site-header');
 
   if (navToggle && navLinks) {
     function closeNav() {
       navLinks.classList.remove('is-open');
       navToggle.setAttribute('aria-expanded', 'false');
       document.body.style.overflow = '';
-      if (siteHeader) { siteHeader.classList.remove('site-header--nav-open'); }
     }
 
     navToggle.addEventListener('click', function (e) {
@@ -18,7 +16,6 @@
       var isOpen = navLinks.classList.toggle('is-open');
       navToggle.setAttribute('aria-expanded', String(isOpen));
       document.body.style.overflow = isOpen ? 'hidden' : '';
-      if (siteHeader) { siteHeader.classList.toggle('site-header--nav-open', isOpen); }
     });
 
     navLinks.querySelectorAll('a').forEach(function (link) {
